@@ -1,4 +1,4 @@
-##Set
+## Set
 
 ES6新的数据结构，**没有重复的值**。
 
@@ -8,19 +8,19 @@ Set加入值**不会发生类型转换，5与'5'不同**
 
 **因此对象总是不相等，例外是NaN等于NaN**
 
-####两个方法：
+#### 两个方法：
 
 - Set.prototype.constructor 构造函数Set
 - Set.prototype.size 返回成员个数
 
-####四个操作方法：
+#### 四个操作方法：
 
 - delete() 返回布尔值
 - has() 返回布尔值
 - add() 返回Set本身，可以采用链式写法
 - clear() 无返回
 
-####四个遍历方法：
+#### 四个遍历方法：
 
 - keys() 返回键名的遍历器
 - values() 返回键值的遍历器
@@ -64,33 +64,13 @@ arr // [1, 2, 3]
 
 #### 作为构造函数的参数：
 
-1. 数组或者类似数组的对象
-2. 具有iterable接口的对象
+​	可迭代对象（具有iterable接口）
 
 #### 3个方法：
 
 ​	**has(), delete(), add()**
 
 WeakSet的对象都是弱引用，可以用来存储DOM节点而无需担心这些节点从文档移除时会引发内存泄漏
-
-
-
-```javascript
-var wSet2 = new WeakSet(set2)
-VM1357:1 Uncaught TypeError: Invalid value used in weak set
-    at WeakSet.add (native)
-    at new WeakSet (native)
-    at <anonymous>:1:13
-    ???
- 难道set不具备iterable接口吗
-var wSet2 = new WeakSet(set2)
-VM1357:1 Uncaught TypeError: Invalid value used in weak set
-    at WeakSet.add (native)
-    at new WeakSet (native)
-    at <anonymous>:1:13
-```
-
-
 
 ## Map
 
@@ -118,9 +98,7 @@ VM1357:1 Uncaught TypeError: Invalid value used in weak set
 
 ​	`[...map.values()]`
 
-​	`[...map.entries()]`与`[...map]`效果相同	
-
-​	
+​	`[...map.entries()]`与`[...map]`效果相同	​
 
 ## WeakMaP
 
