@@ -8,9 +8,9 @@
 
 - iterator只是把接口规格加到数据结构上，因此遍历器与数据结构是分离的
 
-- 凡存在`Symbol.iterable`属性即说明该对象可迭代，具有遍历器接口，可以使用`for...of`方法
+- 凡存在`Symbol.iterator`属性即说明该对象可迭代，具有遍历器接口，可以使用`for...of`方法
 
-- `Symbol.iterable`是**遍历器生成函数**，返回一个遍历器对象
+- `Symbol.iterator`是**遍历器生成函数**，返回一个遍历器对象
 
 - 遍历器对象本质是一个**指针对象**，具有三个方法:
 
@@ -27,9 +27,9 @@
 - 某些本身不具备遍历器接口的类似数组的对象，部署接口可以直接引用数组的iterator接口
 
   ```javascript
-  arrLike[Symbol.iterable] = Array.prototype[Symbol.iterable];
+  arrLike[Symbol.iterator] = Array.prototype[Symbol.iterator];
 
-  // [][Symbol.iterable]
+  // [][Symbol.iterator]
   ```
 
 ## 遍历语法比较
@@ -55,7 +55,7 @@
 
 ### `for...of`
 
-- 需要对象部署遍历器接口(`Symbol.iterable`)
+- 需要对象部署遍历器接口(`Symbol.iterator`)
 - 可以跳出循环
 - 为不同的数据接口提供统一的遍历方式
 
