@@ -1,7 +1,7 @@
 ## 节点层次
 
 - 文档节点是每个文档的根节点
-- 文档中其他所有元素都包含在文档元素中，一个文档只能有一个文档元素，HTML页面中始终是<html>
+- 文档中其他所有元素都包含在文档元素中，一个文档只能有一个文档元素，HTML页面中始终是html元素
 - **JS中所有节点类型都继承自Node类型**
 - nodeType属性表示节点类型，最好用数值表示为了兼容IE
 - childNodes -> NodeList 类数组
@@ -60,13 +60,13 @@ DOM扩展添加选择符API
 
 ### 属性
 
-- **document.body** -> <body>
+- **document.body** -> body元素
 
-- **document.documentElement** -> <html>
+- **document.documentElement** -> html元素
 
 - document.doctype -> <! DCOTYPE> 不常用
 
-- document.title -> <title>元素中的文本，**可读可写**
+- document.title -> title元素中的文本，**可读可写**
 
 - document.URL 完整的URL
 
@@ -77,10 +77,10 @@ DOM扩展添加选择符API
   以下四个为特殊集合是HTMLCollection对象实时更新
 
 
-- document.anchors 文档中所有带name特性的<a>
-- document.forms 文档中所有<form>
-- document.images 文档中所有<img>
-- document.links 文档中所有带href的<a>
+- document.anchors 文档中所有带name特性的a元素
+- document.forms 文档中所有form元素
+- document.images 文档中所有img元素
+- document.links 文档中所有带href的a元素
 
 ## Element（1）
 
